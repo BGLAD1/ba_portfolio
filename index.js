@@ -13,23 +13,23 @@ app.get("/", (req,res) =>{
 
 
 
-app.get('/landing/about', (req, res) => {
+app.get('/about', (req, res) => {
   res.render('landing/pages/about.ejs');
 });
 
-app.get('/landin/contact', (req, res) => {
+app.get('/contact', (req, res) => {
   res.render('landing/pages/contact.ejs');
 });
 
-app.get('/landing/hireme', (req, res) => {
+app.get('/hireme', (req, res) => {
   res.render('landing/pages/hireme.ejs');
 });
 
-app.get('/landing/portfolio', (req, res) => {
+app.get('/portfolio', (req, res) => {
   res.render('landing/pages/portfolio.ejs');
 });
 
-app.get('/landing/service', (req, res) => {
+app.get('/service', (req, res) => {
   res.render('landing/pages/service.ejs');
 });
 
