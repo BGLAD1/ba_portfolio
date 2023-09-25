@@ -7,28 +7,30 @@ app.set("view engine", "ejs");
 
 app.use(express.static("public"));
 
-app.get('/', (req, res) => {
-  res.render('pages/index');
+app.get("/", (req,res) =>{
+  res.render("landing/pages/index.ejs");
 });
 
-app.get('/about', (req, res) => {
-  res.render('pages/about');
+
+
+app.get('/landing/about', (req, res) => {
+  res.render('landing/pages/about.ejs');
 });
 
-app.get('/contact', (req, res) => {
-  res.render('pages/contact');
+app.get('/landin/contact', (req, res) => {
+  res.render('landing/pages/contact.ejs');
 });
 
-app.get('/hireme', (req, res) => {
-  res.render('pages/hireme');
+app.get('/landing/hireme', (req, res) => {
+  res.render('landing/pages/hireme.ejs');
 });
 
-app.get('/portfolio', (req, res) => {
-  res.render('pages/portfolio');
+app.get('/landing/portfolio', (req, res) => {
+  res.render('landing/pages/portfolio.ejs');
 });
 
-app.get('/service', (req, res) => {
-  res.render('pages/service');
+app.get('/landing/service', (req, res) => {
+  res.render('landing/pages/service.ejs');
 });
 
 
