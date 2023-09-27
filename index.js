@@ -36,6 +36,40 @@ app.get('/service', (req, res) => {
 
 
 
+
+app.get("/admin", (req,res) =>{
+  res.render("admin/pages/index.ejs");
+});
+
+app.get('/bio', (req, res) => {
+  res.render('admin/pages/bio.ejs');
+});
+
+
+app.get('/contact-us', (req, res) => {
+  res.render('admin/pages/contact-us.ejs');
+});
+
+app.get('/profile', (req, res) => {
+  res.render('admin/pages/profile.ejs');
+});
+
+app.get('/project-add', (req, res) => {
+  res.render('admin/pages/project-add.ejs');
+});
+
+app.get('/project-edit', (req, res) => {
+  res.render('admin/pages/project-edit.ejs');
+});
+
+app.get('/projects', (req, res) => {
+  res.render('admin/pages/projects.ejs');
+});
+
+app.get('/services', (req, res) => {
+  res.render('admin/pages/services.ejs');
+});
+
 app.listen (port, () => {
   console.log(`Server running on port ${port}`);
 });
