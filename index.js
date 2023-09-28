@@ -1,6 +1,19 @@
-let express = require ("express");
-let app = express();
+const express = require('express');
+const mongoose = require('mongoose');
+const app = express();
 const port = 3000;
+
+// Connect to MongoDB
+mongoose.connect('mongodb://localhost:27017/Portfoliodb', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => {
+  console.log('Connected to MongoDB');
+})
+.catch((error) => {
+  console.error('MongoDB connection error:', error);
+});
 
 
 app.set("view engine", "ejs");
@@ -37,7 +50,7 @@ app.get('/service', (req, res) => {
 
 
 
-app.get("/admin", (req,res) =>{
+app.get("/index", (req,res) =>{
   res.render("admin/pages/index.ejs");
 });
 
